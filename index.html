@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/estilo.css">
+
+    <title>Inquérito - Messi vs Ronaldo</title>
+</head>
+
+<body>
+
+    <h1>Votação Livre, Justa e Transparente - By Aurélio Jovo.</h1>
+
+    <!-- Mensagem apresentada após a escolha -->
+    <div id="mensagem">
+        <h2>Ótima escolha!</h2>
+        <p>Messi é, sem dúvida, o melhor jogador de futebol do mundo!</p>
+        <h2>Messi > Ronaldo</h2>
+    </div>
+
+    <!-- Painel principal da votação -->
+    <div class="painel">
+
+        <header>
+            <h2>Quem é o melhor jogador de futebol do mundo (GOAT)?</h2>
+        </header>
+
+        <div class="foto">
+
+            <!-- Opção Messi -->
+            <div class="mesi">
+                <img src="/img/messi.jpg" alt="Lionel Messi">
+
+                <div class="btn">
+                    <button id="sim">Messi</button>
+                </div>
+            </div>
+
+            <!-- Opção Ronaldo -->
+            <div class="cr7">
+                <img src="/img/cr7.jpg" alt="Cristiano Ronaldo">
+
+                <div class="btn">
+                    <button id="nao" onmouseover="fujao()" onclick="fujao()">
+                        Ronaldo
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Ficheiro JavaScript -->
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
