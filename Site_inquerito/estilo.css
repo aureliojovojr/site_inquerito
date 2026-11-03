@@ -1,0 +1,159 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Caacupe One", sans-serif;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #ffffff, #e5e7eb, #dbeafe);
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+
+/* Título principal */
+h1 {
+    text-align: center;
+    padding: 20px 15px 0;
+    margin-bottom: 20px;
+}
+
+
+/* Painel principal */
+.painel {
+    width: 66%;
+    min-height: 500px;
+    margin: 30px auto 60px;
+    /* margem fixa em baixo (antes: 5%) */
+    padding: 20px;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Cabeçalho do painel */
+.painel header h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+/* Área das fotografias */
+.foto {
+    display: flex;
+    justify-content: space-around;
+    /* antes: space-between */
+    align-items: flex-start;
+    /* alinha os topos das duas colunas */
+    margin: auto;
+    padding: 30px 50px 30px;
+    /* padding em baixo evita o botão vazar */
+    gap: 30px;
+}
+
+
+/* Cada opção (foto + botão) */
+.opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Imagens */
+.foto img {
+    width: 280px;
+    height: 300px;
+    object-fit: contain;
+    border: 3px solid #000128;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Área dos botões */
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    height: 80px;
+    /* reserva o espaço do botão, mesmo com position: absolute */
+}
+
+.btn button {
+    padding: 10px 25px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background: #000128;
+    font-family: inherit;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.btn button:hover {
+    background: #030460;
+}
+
+
+/* Botão Messi */
+#sim {
+    position: relative;
+}
+
+
+/* Botão Ronaldo (o botão fugitivo) */
+#nao {
+    position: absolute;
+}
+
+
+/* Mensagem após a escolha */
+#mensagem {
+    display: none;
+    width: 500px;
+    max-width: 90%;
+    min-height: 150px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #000128;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#mensagem h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+/* Responsividade: tablets e telemóveis */
+@media (max-width: 900px) {
+    .painel {
+        width: 92%;
+    }
+
+    .foto {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .foto img {
+        width: 100%;
+        max-width: 280px;
+    }
+}
